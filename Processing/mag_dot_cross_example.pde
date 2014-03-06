@@ -1,0 +1,17 @@
+PVector v = new PVector (90,07,0);
+strokeWeight(2);
+line(0,0,v.x,v.y);
+double mag=(Math.sqrt(v.x*v.x+v.y*v.y));
+//println("mag: "+mag);
+//v.div((float)mag);
+//println("v: "+v);
+PVector x = new PVector(49,25,0);
+line(0,0,x.x,x.y);
+double dot=v.x*x.x+v.y*x.y;
+//println("dot: "+dot);
+//println("vdot: "+v.dot(x));
+PVector cross = v.cross(x);
+println("crossx: "+cross);
+//println("crossv: "+x.cross(v));
+println("degrees: "+degrees(acos(v.dot(x)/v.mag()/x.mag())));
+println("area: "+cross.mag());
